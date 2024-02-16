@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def clean_data(input1, input2, output):
     # Merge the input data files based on ID value
     df1 = pd.read_csv(input1)
@@ -25,11 +26,12 @@ def clean_data(input1, input2, output):
     # Save the cleaned data to the output file
     cleaned_df.to_csv(output, index=False)
 
-    if __name__ == "__main__":
-        # Specify the file paths
-        input1 = r"/Users/lelewang/Desktop/Course2/7035AI/Assignment1/respondent_contact.csv"
-        input2 = r"/Users/lelewang/Desktop/Course2/7035AI/Assignment1/respondent_other.csv"
-        output = r"/Users/lelewang/Desktop/Course2/7035AI/Assignment1/respondent_cleaned.csv"
 
-        # Call the clean_data function
-        clean_data(input1, input2, output)
+if __name__ == "__main__":
+    # Specify the file paths
+    input1 = r"/Users/lelewang/Desktop/Course2/7035AI/Assignment1/respondent_contact.csv"
+    input2 = r"/Users/lelewang/Desktop/Course2/7035AI/Assignment1/respondent_other.csv"
+    output = r"/Users/lelewang/Desktop/Course2/7035AI/Assignment1/respondent_cleaned.csv"
+
+    # Call the clean_data function
+    clean_data(input1, input2, output)
